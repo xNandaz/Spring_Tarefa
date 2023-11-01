@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Jogadores de League of Legends</title>
+</head>
+<body>
+<h1>Lista de Jogadores de League of Legends (LoL)</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Nome</th>
+        <th>Campeão</th>
+        <th>Nível</th>
+        <th>Abates</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="jogador : ${jogadores}">
+        <td th:text="${jogador.nome}"></td>
+        <td th:text="${jogador.campeao}"></td>
+        <td th:text="${jogador.nivel}"></td>
+        <td th:text="${jogador.abates}"></td>
+    </tr>
+    </tbody>
+</table>
+<hr>
+</body>
+</html>
